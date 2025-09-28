@@ -6,7 +6,6 @@
 <title>Kaison | Portfolio Profesional</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <style>
-/* Reset y base */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
 body{background:#0d0d0d;color:#fff;overflow-x:hidden;scroll-behavior:smooth;}
 a{text-decoration:none;color:inherit;}
@@ -27,26 +26,26 @@ section p{color:#ccc;font-size:1.1rem;max-width:800px;margin-bottom:30px;line-he
 .btn:hover{background:#e0663b;transform:scale(1.05);}
 
 /* Hero */
-#inicio{position:relative;background:url('https://i.imgur.com/1X2XbUZ.jpg') no-repeat center center/cover;}
+#inicio{position:relative;background:url('https://i.imgur.com/Ys2lxrn.jpg') no-repeat center center/cover;}
 #inicio::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);}
 #inicio .content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;}
 
 /* Sobre mí */
-#sobre-mi{background:#111;border-radius:15px;padding:60px 30px;max-width:900px;margin:50px auto;}
+#sobre-mi{background:#111;border-radius:15px;padding:60px 30px;max-width:900px;margin:50px auto;text-align:center;}
 #sobre-mi img{width:180px;border-radius:50%;margin-bottom:20px;display:block;margin-left:auto;margin-right:auto;}
 #sobre-mi h2{margin-bottom:20px;}
 #sobre-mi p{color:#ddd;line-height:1.6;}
 
 /* Experiencia */
 #proyectos{background:#1a1a1a;border-radius:15px;padding:60px 30px;max-width:1000px;margin:50px auto;}
-.project-list{display:flex;flex-direction:column;gap:30px;}
+.project-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;}
 .project{background:#222;padding:20px;border-radius:15px;transition:0.3s;display:flex;flex-direction:column;align-items:flex-start;}
 .project:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(255,127,80,0.5);}
 .project h3{color:#ff7f50;margin-bottom:10px;}
 .project p{color:#ccc;font-size:1rem;}
 
 /* Contacto */
-#contacto{background:#111;border-radius:15px;padding:60px 30px;max-width:600px;margin:50px auto;}
+#contacto{background:#111;border-radius:15px;padding:60px 30px;max-width:600px;margin:50px auto;text-align:center;}
 #contacto form{display:flex;flex-direction:column;gap:15px;}
 #contacto input,#contacto textarea{padding:12px;border:none;border-radius:8px;width:100%;background:#222;color:#fff;}
 #contacto button{padding:12px;background:#ff7f50;border:none;border-radius:8px;color:#fff;font-weight:600;cursor:pointer;transition:0.3s;}
