@@ -7,67 +7,66 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <style>
 /* Reset y base */
-* {margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif;}
-body {background:#0d0d0d; color:#fff; overflow-x:hidden; scroll-behavior:smooth;}
-a {text-decoration:none;}
-h1,h2,h3,p {margin:0; padding:0;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+body{background:#0d0d0d;color:#fff;overflow-x:hidden;scroll-behavior:smooth;}
+a{text-decoration:none;color:inherit;}
+h1,h2,h3,p{margin:0;padding:0;}
 
 /* Header */
-header {position:fixed; top:0; left:0; width:100%; background:rgba(0,0,0,0.85); backdrop-filter:blur(10px); padding:20px 50px; display:flex; justify-content:space-between; align-items:center; z-index:100;}
-.logo {color:#ff7f50; font-weight:700; font-size:1.8rem;}
-nav ul {display:flex; list-style:none; gap:30px;}
-nav a {color:#fff; font-weight:600; transition:0.3s;}
-nav a:hover {color:#ff7f50;}
+header{position:fixed;top:0;left:0;width:100%;background:rgba(0,0,0,0.85);backdrop-filter:blur(10px);padding:20px 50px;display:flex;justify-content:space-between;align-items:center;z-index:100;}
+.logo{color:#ff7f50;font-weight:700;font-size:1.8rem;}
+nav ul{display:flex;list-style:none;gap:30px;}
+nav a{color:#fff;font-weight:600;transition:0.3s;}
+nav a:hover{color:#ff7f50;}
 
 /* Secciones generales */
-section {width:100%; min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:120px 20px;}
-section h1,h2 {color:#ff7f50; margin-bottom:20px;}
-section p {color:#ccc; font-size:1.1rem; max-width:800px; margin-bottom:30px; line-height:1.6;}
-.btn {padding:12px 30px; background:#ff7f50; color:#fff; border-radius:50px; font-weight:600; transition:0.3s;}
-.btn:hover {background:#e0663b; transform:scale(1.05);}
+section{width:100%;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 20px;}
+section h1,section h2{color:#ff7f50;margin-bottom:20px;}
+section p{color:#ccc;font-size:1.1rem;max-width:800px;margin-bottom:30px;line-height:1.6;}
+.btn{padding:12px 30px;background:#ff7f50;color:#fff;border-radius:50px;font-weight:600;transition:0.3s;}
+.btn:hover{background:#e0663b;transform:scale(1.05);}
 
 /* Hero */
-#inicio {background:url('https://i.imgur.com/1X2XbUZ.jpg') no-repeat center center/cover; position:relative;}
-#inicio::after {content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6);}
-#inicio .content {position:relative; z-index:2; display:flex; flex-direction:column; align-items:center;}
+#inicio{position:relative;background:url('https://i.imgur.com/1X2XbUZ.jpg') no-repeat center center/cover;}
+#inicio::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);}
+#inicio .content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;}
 
 /* Sobre mí */
-#sobre-mi {background:#111; border-radius:15px; padding:60px 30px; max-width:900px; margin:50px auto;}
-#sobre-mi img {width:180px; border-radius:50%; margin-bottom:20px; display:block; margin-left:auto; margin-right:auto;}
-#sobre-mi h2 {margin-bottom:20px;}
-#sobre-mi p {color:#ddd;}
+#sobre-mi{background:#111;border-radius:15px;padding:60px 30px;max-width:900px;margin:50px auto;}
+#sobre-mi img{width:180px;border-radius:50%;margin-bottom:20px;display:block;margin-left:auto;margin-right:auto;}
+#sobre-mi h2{margin-bottom:20px;}
+#sobre-mi p{color:#ddd;line-height:1.6;}
 
-/* Experiencia / Proyectos */
-#proyectos {background:#1a1a1a; border-radius:15px; padding:60px 30px; max-width:1000px; margin:50px auto;}
-.project-list {display:flex; flex-direction:column; gap:30px;}
-.project {background:#222; padding:20px; border-radius:15px; transition:0.3s; display:flex; flex-direction:column; align-items:flex-start;}
-.project:hover {transform:translateY(-5px); box-shadow:0 10px 25px rgba(255,127,80,0.5);}
-.project h3 {color:#ff7f50; margin-bottom:10px;}
-.project p {color:#ccc; font-size:1rem;}
+/* Experiencia */
+#proyectos{background:#1a1a1a;border-radius:15px;padding:60px 30px;max-width:1000px;margin:50px auto;}
+.project-list{display:flex;flex-direction:column;gap:30px;}
+.project{background:#222;padding:20px;border-radius:15px;transition:0.3s;display:flex;flex-direction:column;align-items:flex-start;}
+.project:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(255,127,80,0.5);}
+.project h3{color:#ff7f50;margin-bottom:10px;}
+.project p{color:#ccc;font-size:1rem;}
 
 /* Contacto */
-#contacto {background:#111; border-radius:15px; padding:60px 30px; max-width:600px; margin:50px auto;}
-#contacto form {display:flex; flex-direction:column; gap:15px;}
-#contacto input, #contacto textarea {padding:12px; border:none; border-radius:8px; width:100%; background:#222; color:#fff;}
-#contacto button {padding:12px; background:#ff7f50; border:none; border-radius:8px; color:#fff; font-weight:600; cursor:pointer; transition:0.3s;}
-#contacto button:hover {background:#e0663b; transform:scale(1.05);}
-#contacto ul {display:flex; justify-content:center; gap:20px; list-style:none; margin-top:20px;}
-#contacto a {color:#ff7f50; transition:0.3s;}
-#contacto a:hover {color:#fff; transform:scale(1.2);}
+#contacto{background:#111;border-radius:15px;padding:60px 30px;max-width:600px;margin:50px auto;}
+#contacto form{display:flex;flex-direction:column;gap:15px;}
+#contacto input,#contacto textarea{padding:12px;border:none;border-radius:8px;width:100%;background:#222;color:#fff;}
+#contacto button{padding:12px;background:#ff7f50;border:none;border-radius:8px;color:#fff;font-weight:600;cursor:pointer;transition:0.3s;}
+#contacto button:hover{background:#e0663b;transform:scale(1.05);}
+#contacto ul{display:flex;justify-content:center;gap:20px;list-style:none;margin-top:20px;}
+#contacto a{color:#ff7f50;transition:0.3s;}
+#contacto a:hover{color:#fff;transform:scale(1.2);}
 
 /* Footer */
-footer {text-align:center; padding:20px; background:rgba(0,0,0,0.85); color:#ccc;}
+footer{text-align:center;padding:20px;background:rgba(0,0,0,0.85);color:#ccc;}
 
 /* Animaciones scroll */
-[data-animate]{opacity:0; transform:translateY(50px); transition:all 0.8s ease-out;}
-[data-animate].show{opacity:1; transform:translateY(0);}
+[data-animate]{opacity:0;transform:translateY(50px);transition:all 0.8s ease-out;}
+[data-animate].show{opacity:1;transform:translateY(0);}
 
 /* Responsive */
 @media(max-width:768px){
   nav ul{gap:15px;}
-  section h1,h2{font-size:2rem;}
+  section h1,section h2{font-size:2rem;}
   #sobre-mi img{width:150px;}
-  .project-list{gap:20px;}
 }
 </style>
 </head>
@@ -159,3 +158,10 @@ const elements = document.querySelectorAll('[data-animate]');
 const observer = new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
     if(entry.isIntersecting){entry.target.classList.add('show');}
+  });
+},{threshold:0.2});
+elements.forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
