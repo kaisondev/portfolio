@@ -3,29 +3,106 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kaison | Inicio</title>
-<link rel="stylesheet" href="assets/css/style.css">
+<title>Kaison | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
+body{color:#fff;scroll-behavior:smooth;}
+header{position:fixed;width:100%;top:0;background:rgba(0,0,0,0.7);padding:15px 30px;display:flex;justify-content:space-between;align-items:center;z-index:100;}
+nav ul{list-style:none;display:flex;gap:25px;}
+nav a{text-decoration:none;color:#ff7f50;font-weight:600;transition:0.3s;}
+nav a:hover{color:#fff;}
+.logo{font-size:1.8rem;color:#ff7f50;font-weight:700;}
+section{min-height:100vh;padding:120px 30px 60px;background-attachment:fixed;background-size:cover;background-position:center;}
+.hero{text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center;}
+.hero h1{font-size:3rem;color:#ff7f50;margin-bottom:10px;}
+.hero p{font-size:1.2rem;margin-bottom:20px;}
+.btn{padding:12px 25px;background:#ff7f50;color:#fff;border-radius:50px;text-decoration:none;font-weight:600;transition:0.3s;}
+.btn:hover{background:#e0663b;}
+.about, .projects, .contact{background:rgba(0,0,0,0.6);border-radius:15px;padding:30px;max-width:900px;margin:auto;margin-bottom:50px;}
+.about img{width:150px;border-radius:50%;margin-bottom:20px;}
+.about h2,.projects h2,.contact h2{color:#ff7f50;margin-bottom:20px;text-align:center;}
+.about p{text-align:center;line-height:1.6;}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.project-card{background:#1e1e1e;padding:20px;border-radius:15px;text-align:center;transition:0.3s transform 0.3s, box-shadow 0.3s;}
+.project-card:hover{transform:translateY(-10px);box-shadow:0 10px 25px rgba(255,127,80,0.5);}
+.project-card img{width:100%;border-radius:10px;margin-bottom:15px;}
+.project-card h3{color:#ff7f50;margin-bottom:10px;}
+.project-card a{display:inline-block;margin-top:10px;padding:8px 20px;background:#ff7f50;color:#fff;border-radius:30px;text-decoration:none;transition:0.3s;}
+.project-card a:hover{background:#e0663b;}
+.contact ul{list-style:none;display:flex;justify-content:center;gap:25px;}
+.contact a{text-decoration:none;color:#ff7f50;font-size:1.2rem;transition:0.3s;}
+.contact a:hover{color:#fff;}
+footer{text-align:center;padding:20px;background:rgba(0,0,0,0.7);}
+@media(max-width:768px){.hero h1{font-size:2.2rem;}.hero p{font-size:1rem;}.projects-grid{grid-template-columns:1fr;}}
+</style>
 </head>
 <body>
+
 <header>
   <div class="logo">Kaison</div>
   <nav>
     <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="about.html">Sobre mí</a></li>
-      <li><a href="projects.html">Proyectos</a></li>
-      <li><a href="contact.html">Contacto</a></li>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
     </ul>
   </nav>
 </header>
-<section class="hero" style="background:url('https://i.imgur.com/FLRkR4k.jpg') center/cover no-repeat;">
+
+<section id="inicio" class="hero" style="background:url('https://i.imgur.com/FLRkR4k.jpg') center/cover no-repeat;">
   <h1>Kaison</h1>
   <p>Configurador de Minecraft y Discord | Apasionado por el anime</p>
-  <a href="projects.html" class="btn">Ver mis proyectos</a>
+  <a href="#proyectos" class="btn">Ver mis proyectos</a>
 </section>
+
+<section id="sobre-mi" class="about" style="background:url('https://i.imgur.com/6Iej2cF.jpg') center/cover no-repeat;">
+  <img src="https://i.imgur.com/5r0P0Ky.png" alt="Kaison">
+  <h2>Sobre mí</h2>
+  <p>Soy Kaison, me dedico a configurar servidores de Minecraft y gestionar comunidades de Discord. Me encanta el anime y siempre busco combinar creatividad y tecnología en mis proyectos.</p>
+</section>
+
+<section id="proyectos" class="projects">
+  <h2>Proyectos</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <img src="https://i.imgur.com/jCjH7Yq.jpg" alt="Servidor Minecraft">
+      <h3>Servidor Minecraft</h3>
+      <p>Configuración completa de servidores con plugins personalizados y administración de la comunidad.</p>
+      <a href="#">Ver más</a>
+    </div>
+    <div class="project-card">
+      <img src="https://i.imgur.com/GvhFy47.jpg" alt="Gestión Discord">
+      <h3>Gestión Discord</h3>
+      <p>Creación y mantenimiento de servidores de Discord, roles, bots y comunidades activas.</p>
+      <a href="#">Ver más</a>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contact" style="background:url('https://i.imgur.com/Ym6D4Pi.jpg') center/cover no-repeat;">
+  <h2>Contacto</h2>
+  <p>Puedes escribirme en mis redes o correo:</p>
+  <ul>
+    <li><a href="mailto:tuemail@example.com">📧 Email</a></li>
+    <li><a href="https://discord.com/users/tuID" target="_blank">💬 Discord</a></li>
+    <li><a href="https://github.com/kaisongg" target="_blank">🐙 GitHub</a></li>
+  </ul>
+</section>
+
 <footer>
   <p>© 2025 Kaison | Hecho con ❤️</p>
 </footer>
-<script src="assets/js/main.js"></script>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+  anchor.addEventListener("click",function(e){
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({behavior:"smooth"});
+  });
+});
+</script>
+
 </body>
 </html>
