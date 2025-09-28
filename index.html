@@ -7,33 +7,58 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
-body{color:#fff;scroll-behavior:smooth;}
-header{position:fixed;width:100%;top:0;background:rgba(0,0,0,0.7);padding:15px 30px;display:flex;justify-content:space-between;align-items:center;z-index:100;}
-nav ul{list-style:none;display:flex;gap:25px;}
-nav a{text-decoration:none;color:#ff7f50;font-weight:600;transition:0.3s;}
-nav a:hover{color:#fff;}
-.logo{font-size:1.8rem;color:#ff7f50;font-weight:700;}
-section{min-height:100vh;padding:120px 30px 60px;background-attachment:fixed;background-size:cover;background-position:center;}
-.hero{text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center;}
-.hero h1{font-size:3rem;color:#ff7f50;margin-bottom:10px;}
-.hero p{font-size:1.2rem;margin-bottom:20px;}
-.btn{padding:12px 25px;background:#ff7f50;color:#fff;border-radius:50px;text-decoration:none;font-weight:600;transition:0.3s;}
-.btn:hover{background:#e0663b;}
-.about, .projects, .contact{background:rgba(0,0,0,0.6);border-radius:15px;padding:30px;max-width:900px;margin:auto;margin-bottom:50px;}
-.about img{width:150px;border-radius:50%;margin-bottom:20px;}
-.about h2,.projects h2,.contact h2{color:#ff7f50;margin-bottom:20px;text-align:center;}
-.about p{text-align:center;line-height:1.6;}
+body{background:#111;color:#fff;scroll-behavior:smooth;}
+header{position:fixed;width:100%;top:0;left:0;padding:20px 50px;background:rgba(0,0,0,0.7);display:flex;justify-content:space-between;align-items:center;z-index:100;backdrop-filter:blur(5px);}
+.logo{color:#ff7f50;font-size:1.8rem;font-weight:700;}
+nav ul{list-style:none;display:flex;gap:30px;}
+nav a{text-decoration:none;color:#fff;font-weight:600;transition:0.3s;}
+nav a:hover{color:#ff7f50;}
+section{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:100px 20px;transition:0.5s;}
+.hero{background:url('https://i.imgur.com/1X2XbUZ.jpg') no-repeat center center/cover;}
+.hero h1{font-size:3rem;color:#ff7f50;margin-bottom:20px;opacity:0;animation:fadeInDown 1s forwards;}
+.hero p{font-size:1.2rem;margin-bottom:30px;opacity:0;animation:fadeInUp 1s 0.5s forwards;}
+.btn{padding:12px 30px;background:#ff7f50;color:#fff;border-radius:50px;text-decoration:none;font-weight:600;transition:0.3s;opacity:0;animation:fadeIn 1.5s 1s forwards;}
+.btn:hover{background:#e0663b;transform:scale(1.05);}
+@keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
+@keyframes fadeInDown{0%{opacity:0;transform:translateY(-50px)}100%{opacity:1;transform:translateY(0)}}
+@keyframes fadeInUp{0%{opacity:0;transform:translateY(50px)}100%{opacity:1;transform:translateY(0)}}
+
+/* Sobre mí */
+.about{background:rgba(0,0,0,0.6);border-radius:15px;padding:50px;max-width:900px;margin:50px auto;}
+.about img{width:180px;border-radius:50%;margin-bottom:20px;}
+.about h2{color:#ff7f50;margin-bottom:20px;}
+.about p{line-height:1.6;font-size:1rem;}
+
+/* Proyectos */
+.projects{background:rgba(0,0,0,0.7);border-radius:15px;padding:50px;max-width:1000px;margin:50px auto;}
+.projects h2{color:#ff7f50;margin-bottom:30px;}
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
 .project-card{background:#1e1e1e;padding:20px;border-radius:15px;text-align:center;transition:0.3s transform 0.3s, box-shadow 0.3s;}
 .project-card:hover{transform:translateY(-10px);box-shadow:0 10px 25px rgba(255,127,80,0.5);}
 .project-card img{width:100%;border-radius:10px;margin-bottom:15px;}
 .project-card h3{color:#ff7f50;margin-bottom:10px;}
 .project-card a{display:inline-block;margin-top:10px;padding:8px 20px;background:#ff7f50;color:#fff;border-radius:30px;text-decoration:none;transition:0.3s;}
-.project-card a:hover{background:#e0663b;}
-.contact ul{list-style:none;display:flex;justify-content:center;gap:25px;}
-.contact a{text-decoration:none;color:#ff7f50;font-size:1.2rem;transition:0.3s;}
-.contact a:hover{color:#fff;}
+.project-card a:hover{background:#e0663b;transform:scale(1.05);}
+
+/* Contacto */
+.contact{background:rgba(0,0,0,0.6);border-radius:15px;padding:50px;max-width:600px;margin:50px auto;}
+.contact h2{color:#ff7f50;margin-bottom:20px;}
+.contact form{display:flex;flex-direction:column;gap:10px;}
+.contact input,.contact textarea{padding:12px;border:none;border-radius:8px;}
+.contact button{padding:12px;background:#ff7f50;border:none;border-radius:8px;color:#fff;font-weight:600;cursor:pointer;transition:0.3s;}
+.contact button:hover{background:#e0663b;transform:scale(1.05);}
+.contact ul{list-style:none;display:flex;justify-content:center;gap:20px;margin-top:20px;}
+.contact a{text-decoration:none;color:#ff7f50;transition:0.3s;}
+.contact a:hover{color:#fff;transform:scale(1.2);}
+
+/* Footer */
 footer{text-align:center;padding:20px;background:rgba(0,0,0,0.7);}
+
+/* Scroll animations */
+[data-animate]{opacity:0;transform:translateY(50px);transition:all 0.8s ease-out;}
+[data-animate].show{opacity:1;transform:translateY(0);}
+
+/* Responsive */
 @media(max-width:768px){.hero h1{font-size:2.2rem;}.hero p{font-size:1rem;}.projects-grid{grid-template-columns:1fr;}}
 </style>
 </head>
@@ -51,43 +76,48 @@ footer{text-align:center;padding:20px;background:rgba(0,0,0,0.7);}
   </nav>
 </header>
 
-<section id="inicio" class="hero" style="background:url('https://i.imgur.com/FLRkR4k.jpg') center/cover no-repeat;">
+<section id="inicio" class="hero">
   <h1>Kaison</h1>
-  <p>Configurador de Minecraft y Discord | Apasionado por el anime</p>
-  <a href="#proyectos" class="btn">Ver mis proyectos</a>
+  <p>Configurador de Minecraft y Discord | Amante del anime</p>
+  <a href="#proyectos" class="btn">Ver proyectos</a>
 </section>
 
-<section id="sobre-mi" class="about" style="background:url('https://i.imgur.com/6Iej2cF.jpg') center/cover no-repeat;">
-  <img src="https://i.imgur.com/5r0P0Ky.png" alt="Kaison">
+<section id="sobre-mi" class="about" data-animate>
+  <img src="https://i.imgur.com/6Iej2c3.png" alt="Kaison Anime">
   <h2>Sobre mí</h2>
-  <p>Soy Kaison, me dedico a configurar servidores de Minecraft y gestionar comunidades de Discord. Me encanta el anime y siempre busco combinar creatividad y tecnología en mis proyectos.</p>
+  <p>Soy Kaison, configurador de servidores de Minecraft y Discord, apasionado por el anime y la creatividad digital. Me gusta combinar diseño y tecnología en todos mis proyectos.</p>
 </section>
 
-<section id="proyectos" class="projects">
+<section id="proyectos" class="projects" data-animate>
   <h2>Proyectos</h2>
   <div class="projects-grid">
     <div class="project-card">
-      <img src="https://i.imgur.com/jCjH7Yq.jpg" alt="Servidor Minecraft">
+      <img src="https://i.imgur.com/1VzP0xF.jpg" alt="Servidor Minecraft">
       <h3>Servidor Minecraft</h3>
-      <p>Configuración completa de servidores con plugins personalizados y administración de la comunidad.</p>
+      <p>Configuración completa con plugins personalizados y administración de comunidad.</p>
       <a href="#">Ver más</a>
     </div>
     <div class="project-card">
-      <img src="https://i.imgur.com/GvhFy47.jpg" alt="Gestión Discord">
+      <img src="https://i.imgur.com/Jm2nFhR.jpg" alt="Gestión Discord">
       <h3>Gestión Discord</h3>
-      <p>Creación y mantenimiento de servidores de Discord, roles, bots y comunidades activas.</p>
+      <p>Administración de servidores con roles, bots y comunidad activa.</p>
       <a href="#">Ver más</a>
     </div>
   </div>
 </section>
 
-<section id="contacto" class="contact" style="background:url('https://i.imgur.com/Ym6D4Pi.jpg') center/cover no-repeat;">
+<section id="contacto" class="contact" data-animate>
   <h2>Contacto</h2>
-  <p>Puedes escribirme en mis redes o correo:</p>
+  <form>
+    <input type="text" placeholder="Nombre" required>
+    <input type="email" placeholder="Correo electrónico" required>
+    <textarea placeholder="Mensaje" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
   <ul>
-    <li><a href="mailto:tuemail@example.com">📧 Email</a></li>
-    <li><a href="https://discord.com/users/tuID" target="_blank">💬 Discord</a></li>
-    <li><a href="https://github.com/kaisongg" target="_blank">🐙 GitHub</a></li>
+    <li><a href="https://github.com/kaisongg" target="_blank">GitHub</a></li>
+    <li><a href="#">Discord</a></li>
+    <li><a href="#">Twitter</a></li>
   </ul>
 </section>
 
@@ -96,12 +126,24 @@ footer{text-align:center;padding:20px;background:rgba(0,0,0,0.7);}
 </footer>
 
 <script>
-document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
-  anchor.addEventListener("click",function(e){
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener("click",function(e){
     e.preventDefault();
     document.querySelector(this.getAttribute("href")).scrollIntoView({behavior:"smooth"});
   });
 });
+
+// Scroll animations
+const elements = document.querySelectorAll('[data-animate]');
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{threshold:0.2});
+elements.forEach(el=>observer.observe(el));
 </script>
 
 </body>
